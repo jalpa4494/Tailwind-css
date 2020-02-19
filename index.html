@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Introduction to Tailwind</title>
+    <meta name="description" content="description">
+    <meta name="keywords" content="keywords">
+
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/output.css">
+
+</head>
+
+<body class="bg-theme font-sans leading-normal tracking-normal">
+
+    <!--Header Content-->
+    <div class="mini-header fixed w-full z-10 top-0 shadow">
+        <div
+            class="w-full container mx-auto flex flex-wrap items-center mt-0 md:pb-0 text-xs md:text-sm lg:md:text-sm xl:md:text-sm">
+            <div class="w-full md:w-1/2 xl:w-1/2 pl-2 md:pl-0 py-1 md:py-2 lg:py-2 xl:py-2">
+                <p>Latest Post: Most IT companies work on these 7 programming languages</p>
+            </div>
+            <div class="w-full md:w-1/2 xl:w-1/2 pl-2 md:pl-0 py-2 hidden md:inline-flex lg:inline-flex xl:inline-flex">
+                <p>Subscribe |</p>
+                <ul class="flex">
+                    <li><a href="#" class="sociallink"><i class="ri-github-fill"></i></a></li>
+                    <li><a href="#" class="sociallink"><i class="ri-medium-fill"></i></a></li>
+                    <li><a href="#" class="sociallink"><i class="ri-facebook-box-fill"></i></a></li>
+                    <li><a href="#" class="sociallink"><i class="ri-linkedin-box-fill"></i></a></li>
+                    <li><a href="#" class="sociallink"><i class="ri-youtube-fill"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav id="header" class="bg-white fixed w-full z-10 top-40 shadow">
+        <div class="w-full container mx-auto flex flex-wrap items-center mt-0 py-5 md:pb-0">
+            <div class="w-1/2 md:w-1/5 xl:w-1/5 pl-2 md:pl-0">
+                <a class="text-gray-900 text-base xl:text-xl no-underline hover:no-underline font-bold" href="#">
+                    <img src="image/techblog.png" alt="logo">
+                </a>
+            </div>
+            <div class="w-1/2  md:w-1/5 xl:w-1/5 pr-0">
+                <div class="flex relative inline-block float-right">
+                    <div class="relative block lg:hidden pr-4" id="userMenu">
+                        <button id="nav-toggle"
+                            class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-900 hover:border-teal-500 appearance-none focus:outline-none">
+                            <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                <title>Menu</title>
+                                <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-3/5 xl:w-3/5 flex-grow lg:flex lg:items-center hidden lg:block mt-2 mb-2 lg:mt-0 bg-white z-20"
+                id="nav-content">
+                <ul class="list-reset lg:flex flex-1 items-center px-4 md:px-0">
+                    <li class="mr-6 my-2 md:my-0 active">
+                        <a href="#"
+                            class="block py-1 md:py-3 pl-1 align-middle text-purple-500 no-underline hover:text-purple-500">
+                            <span class="pb-1 md:pb-0 text-md font-medium">Home</span>
+                        </a>
+                    </li>
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="#"
+                            class="block py-1 md:py-3 pl-1 align-middle text-gray-900 no-underline hover:text-purple-500 hover:border-purple-500">
+                            <span class="pb-1 md:pb-0 text-md font-medium">Design</span>
+                        </a>
+                    </li>
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="#"
+                            class="block py-1 md:py-3 pl-1 align-middle text-gray-900 no-underline hover:text-purple-500 hover:border-purple-500">
+                            <span class="pb-1 md:pb-0 text-md font-medium">Development</span>
+                        </a>
+                    </li>
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="#"
+                            class="block py-1 md:py-3 pl-1 align-middle text-gray-900 no-underline hover:text-purple-500 hover:border-purple-500">
+                            <span class="pb-1 md:pb-0 text-md font-medium">Technology</span>
+                        </a>
+                    </li>
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="#"
+                            class="block py-1 md:py-3 pl-1 align-middle text-gray-900 no-underline hover:text-purple-500 hover:border-purple-500">
+                            <span class="pb-1 md:pb-0 text-md font-medium">Tools</span>
+                        </a>
+                    </li>
+                    <li class="mr-6 my-2 md:my-0">
+                        <a href="#"
+                            class="block py-1 md:py-3 pl-1 align-middle text-gray-900 no-underline hover:text-purple-500 hover:border-purple-500">
+                            <span class="pb-1 md:pb-0 text-md font-medium">Freebies</span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="relative pull-right pl-4 pr-4 md:pr-0">
+                    <input type="search" placeholder="Search"
+                        class="w-full bg-gray-100 text-sm text-gray-800 transition border focus:outline-none focus:border-gray-700 rounded py-1 px-2 pl-10 appearance-none leading-normal">
+                    <div class="absolute search-icon" style="top: 0.375rem;left: 1.75rem;">
+                        <svg class="fill-current pointer-events-none text-gray-800 w-4 h-4"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path
+                                d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z">
+                            </path>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--Header Content-->
+
+    <!--container Content-->
+    <div class="container w-full mx-auto pt-20">
+
+        <div class="w-full px-4 md:px-0 md:mt-8 mb-8 text-gray-800 leading-normal news-section">
+
+            <div class="flex flex-wrap py-4">
+                <div class="sm:w-4/10  md:w-2/10 xl:w-2/10 p-2">
+                    <div class="topic mx-2">
+                        <h3>Topics</h3>
+                    </div>
+                </div>
+
+                <div class="sm:w-1/10  md:w-1/10 xl:w-1/10 p-2">
+                    <a href="#" class="bg-white topic-list">Laravel</a>
+                </div>
+                <div class="sm:w-1/10  md:w-1/10 xl:w-1/10 p-2">
+                    <a href="#" class="bg-white topic-list">React js</a>
+                </div>
+                <div class="sm:w-1/10  md:w-1/10 xl:w-1/10 p-2">
+                    <a href="#" class="bg-white topic-list">Vue js</a>
+                </div>
+                <div class="sm:w-1/10  md:w-1/10 xl:w-1/10 p-2">
+                    <a href="#" class="bg-white topic-list">Laravel</a>
+                </div>
+                <div class="sm:w-1/10  md:w-1/10 xl:w-1/10 p-2">
+                    <a href="#" class="bg-white topic-list">React js</a>
+                </div>
+                <div class="sm:w-1/10  md:w-1/10 xl:w-1/10 p-2">
+                    <a href="#" class="bg-white topic-list">Vue js</a>
+                </div>
+                <div class="sm:w-1/10  md:w-1/10 xl:w-1/10 p-2">
+                    <a href="#" class="bg-white topic-list">Laravel</a>
+                </div>
+                <div class="sm:w-1/10  md:w-1/10 xl:w-1/10 p-2">
+                    <a href="#" class="bg-white topic-list">React js</a>
+                </div>
+
+            </div>
+
+            <!--Divider-->
+            <hr class="border-b-2 border-gray-400 my-4 mx-4">
+            <!--Divider-->
+
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-2/3 xl:w-2/3 p-3">
+                    <div class="news-section-inner">
+                        <h4 class="mb-20 mt-20">Latest News</h4>
+                        <div class="bg-white h-auto p-5 mb-5 rounded">
+                            <div>
+                                <h5 class="text-uppercase mb-2">Laravel | Development</h5>
+                                <div class="float-right share-icon-color ">
+                                    <i class="ri-eye-fill"></i>
+                                    <span class="font-medium">870</span></div>
+                            </div>
+
+                            <p class="mb-2 font-medium text-lg">Laravel Vapor – Serverless deployment platform
+                            </p>
+                            <h6 class="text-gray text-uppercase mb-3">MAY 14 2019 - Posted by John Doe - 1 Min
+                                Read</h6>
+                            <p class="mb-4">Laravel Vapor is a serverless deployment platform for Laravel,
+                                powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love
+                                with the scalable. One day however a small line of blind text by the name of
+                                Lorem Ipsum decided to leave...</p>
+                            <p class="border-bottom"></p>
+                            <div class="mt-4 mb-4">
+                                <a href="#" class="read-more">READ MORE</a>
+                                <div class="float-right share-icon-color ">
+                                    <a href="#">
+                                        <i class="ri-share-line"></i>
+                                        <span class="font-medium">SHARE</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white h-auto p-5 mb-5  rounded">
+                            <div>
+                                <h5 class="text-uppercase mb-2">REACT</h5>
+                                <div class="float-right share-icon-color ">
+                                    <i class="ri-eye-fill"></i>
+                                    <span class="font-medium">676</span></div>
+                            </div>
+
+                            <p class="mb-2 font-medium text-lg">React v16+ Cheat Sheet (PDF/JPG/Custom themes)
+                            </p>
+                            <h6 class="text-gray text-uppercase mb-3">MAY 14 2019 - Posted by John Doe - 1 Min
+                                Read</h6>
+                            <p class="mb-4">Laravel Vapor is a serverless deployment platform for Laravel,
+                                powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love
+                                with the scalable. One day however a small line of blind text by the name of
+                                Lorem Ipsum decided to leave...</p>
+                            <p class="border-bottom"></p>
+                            <div class="mt-4 mb-4">
+                                <a href="#" class="read-more">READ MORE</a>
+                                <div class="float-right share-icon-color ">
+                                    <a href="#">
+                                        <i class="ri-share-line"></i>
+                                        <span class="font-medium">SHARE</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white h-auto p-5 mb-5  rounded">
+                            <div>
+                                <h5 class="text-uppercase mb-2">Laravel | Development</h5>
+                                <div class="float-right share-icon-color ">
+                                    <i class="ri-eye-fill"></i>
+                                    <span class="font-medium">345</span></div>
+                            </div>
+
+                            <p class="mb-2 font-medium text-lg">WordPress asking for FTP Credentials while
+                                installing plugin/th</p>
+                            <h6 class="text-gray text-uppercase mb-3">MAY 14 2019 - Posted by John Doe - 1 Min
+                                Read</h6>
+                            <p class="mb-4">This happens due to permission issue to the folder( wp-content ).
+                                follow the below steps to resolve the issue.</p>
+                            <p class="border-bottom"></p>
+                            <div class="mt-4 mb-4">
+                                <a href="#" class="read-more">READ MORE</a>
+                                <div class="float-right share-icon-color ">
+                                    <a href="#">
+                                        <i class="ri-share-line"></i>
+                                        <span class="font-medium">SHARE</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white h-auto p-5 mb-5  rounded">
+                            <div>
+                                <h5 class="text-uppercase mb-2">Design</h5>
+                                <div class="float-right share-icon-color ">
+                                    <i class="ri-eye-fill"></i>
+                                    <span class="font-medium">170</span></div>
+                            </div>
+
+                            <p class="mb-2 font-medium text-lg">SPAN x Design Notes, Episodes 16-20</p>
+                            <h6 class="text-gray text-uppercase mb-3">MAY 14 2019 - Posted by John Doe - 1 Min
+                                Read</h6>
+                            <p class="mb-4">What’s it like to be friends with a robot? How does it feel to hold
+                                Google in your hand? Why should we value friction in design? These are just a
+                                few of the questions that arose onstage during our 2018 SPAN Helsinki
+                                conference. Behind the scenes...</p>
+                            <p class="border-bottom"></p>
+                            <div class="mt-4 mb-4">
+                                <a href="#" class="read-more">READ MORE</a>
+                                <div class="float-right share-icon-color ">
+                                    <a href="#">
+                                        <i class="ri-share-line"></i>
+                                        <span class="font-medium">SHARE</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <a class="text-uppercase loadmore font-medium" href="#"><i class="ri-add-line"></i>
+                            load more
+                        </a>
+                    </div>
+                    <div class="news-section-inner">
+                        <h4 class="mb-20 mt-30 inline-block">Editor's Choice</h4>
+                        <a href="#"><span class="float-right mb-36 mt-30">View All</span></a>
+                        <div class="bg-white h-auto p-5 mb-5  rounded">
+                            <div>
+                                <h5 class="text-uppercase mb-2">javascript</h5>
+                                <div class="float-right share-icon-color ">
+                                    <i class="ri-eye-fill"></i>
+                                    <span class="font-medium">970</span></div>
+                            </div>
+
+                            <p class="mb-2 font-medium text-lg">React v16+ Cheat Sheet (PDF/JPG/Custom themes)
+                            </p>
+                            <h6 class="text-gray text-uppercase mb-3">MAY 14 2019 - Posted by John Doe - 1 Min
+                                Read</h6>
+                            <p class="mb-4">Laravel Vapor is a serverless deployment platform for Laravel,
+                                powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love
+                                with the scalable. One day however a small line of blind text by the name of
+                                Lorem Ipsum decided to leave...</p>
+                            <p class="border-bottom"></p>
+                            <div class="mt-4 mb-4">
+                                <a href="#" class="read-more">READ MORE</a>
+                                <div class="float-right share-icon-color ">
+                                    <a href="#">
+                                        <i class="ri-share-line"></i>
+                                        <span class="font-medium">SHARE</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/3 xl:w-1/3 p-3">
+                    <div>
+                        <h5 class="inline-block mb-30 mt-30">Popular</h5>
+                        <a href="#"><span class="float-right mb-36 mt-30">View All</span></a>
+                        <div class="bg-white h-auto p-5 rounded">
+                            <div class="mb-4">
+                                <p class="font-medium">Laravel Vapor – Serverless deployment platform!</p>
+                                <h6 class="text-gray text-uppercase">MAY 3 2019 - 1 Min Read</h6>
+                            </div>
+
+                            <div class="mb-4">
+                                <p class="font-medium">AppleTV Screensaver Mashup with never-ending drone music.
+                                </p>
+                                <h6 class="text-gray text-uppercase">JAN 03 2019 - 1 Min Read</h6>
+                            </div>
+
+                            <div class="mb-4">
+                                <p class="font-medium">Best Vue.js Component Libraries/Frameworks for 2018</p>
+                                <h6 class="text-gray text-uppercase">AUG 08 2019 - 1 Min Read</h6>
+                            </div>
+
+                            <div class="mb-4">
+                                <p class="font-medium">React for Absolute Beginners — Free Course</p>
+                                <h6 class="text-gray text-uppercase">SEP 14 2019 - 1 Min Read</h6>
+                            </div>
+
+                            <div>
+                                <p class="font-medium">Best React Component Libraries/Frameworks for 2018</p>
+                                <h6 class="text-gray text-uppercase">MAR 14 2019 - 1 Min Read</h6>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <h5 class="inline-block mb-20 mt-20">Categories</h5>
+                        <a href="#"><span class="float-right mb-36 mt-30">View All</span></a>
+                        <div class="bg-white h-auto p-5 rounded">
+                            <div class="technology-list">
+                                <ul>
+                                    <li class="font-medium mb-2">AMP (3)</li>
+                                    <li class="font-medium mb-2">Bulma (2)</li>
+                                    <li class="font-medium mb-2">CSS (34)</li>
+                                    <li class="font-medium mb-2">Git (1)</li>
+                                    <li class="font-medium mb-2">Javascript (12)</li>
+                                    <li class="font-medium mb-2">jQuery (2)</li>
+                                    <li class="font-medium mb-2">HTML (15)</li>
+                                    <li class="font-medium mb-2">Laravel (17)</li>
+                                    <li class="font-medium mb-2">PHP (21)</li>
+                                    <li class="font-medium mb-2">React (6)</li>
+                                    <li class="font-medium mb-2">Uncategorized (1)</li>
+                                    <li class="font-medium mb-2">vuejs (5)</li>
+                                    <li class="font-medium mb-2">Wordpress (4)</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <h5 class="inline-block mb-20 mt-20">Tags</h5>
+                        <a href="#"><span class="float-right mb-36 mt-30">View All</span></a>
+                        <div class="bg-white h-auto p-5 rounded">
+                            <div class="tag-list">
+                                <span>REACT (10)</span>
+                                <span>Vuejs (5)</span>
+                                <span>Technology (23)</span>
+                                <span>Laravel (5)</span>
+                                <span>REACT (10)</span>
+                                <span>Vuejs (5)</span>
+                                <span>REACT (10)</span>
+                                <span>REACT (10)</span>
+                                <span>Vuejs (5)</span>
+                                <span>Technology (23)</span>
+                                <span>Laravel (5)</span>
+                                <span>REACT (10)</span>
+                                <span>Vuejs (5)</span>
+                                <span>Technology (23)</span>
+                                <span>Vuejs (5)</span>
+                                <span>REACT (10)</span>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="w-full p-3">
+                <div class="bg-parralax container flex items-center justify-center  min-h-full mx-auto">
+                    <div class="overlay">
+                        <div class="mx-4 p-4 text-center md:p-8">
+                            <h6 class="text-white">
+                                Don't Miss! Our Insignts
+                            </h6>
+                            <p class="text-lg text-white py-2">
+                                A good start is to sign up for our weekly hand-written newslett
+                            </p>
+
+                            <form class="w-full max-w-sm text-center mx-auto py-4">
+                                <div class="flex items-center border-b border-2  theame-border">
+                                    <input
+                                        class="appearance-none bg-transparent w-full subscription-text-color mr-3 py-2 px-2 leading-tight focus:outline-none"
+                                        type="email" placeholder="Email Address" aria-label="Email Address">
+                                    <button
+                                        class="flex-shrink-0 text-sm  text-white py-1 px-2 rounded subscription-btn mr-1"
+                                        type="button">
+                                        Subscribe
+                                    </button>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="flex flex-row flex-wrap flex-grow mt-2 news-section-inner">
+
+                <div class="w-full p-3">
+
+                    <div>
+                        <h4 class="mb-20 mt-30 inline-block">Don't Miss</h4>
+                        <a href="#"><span class="float-right mb-36 mt-30">View All</span></a>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 p-3">
+                    <div class="bg-white h-auto p-5 rounded">
+                        <div>
+                            <h5 class="text-uppercase mb-2">javascript</h5>
+                            <div class="float-right share-icon-color ">
+                                <i class="ri-eye-fill"></i>
+                                <span class="font-medium">170</span></div>
+                        </div>
+
+                        <p class="mb-2 font-medium text-lg">React v16+ Cheat Sheet (PDF/JPG/Custom themes)
+                        </p>
+                        <h6 class="text-gray text-uppercase mb-3">MAY 14 2019 - Posted by John Doe - 1 Min
+                            Read</h6>
+                        <p class="mb-4">Laravel Vapor is a serverless deployment platform for Laravel,
+                            powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love
+                            with the scalable. One day however a small line of blind text by the name of
+                            Lorem Ipsum decided to leave...</p>
+                        <p class="border-bottom"></p>
+                        <div class="mt-4 mb-4">
+                            <a href="#" class="read-more">READ MORE</a>
+                            <div class="float-right share-icon-color ">
+                                <a href="#">
+                                    <i class="ri-share-line"></i>
+                                    <span class="font-medium">SHARE</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 xl:w-1/2 p-3">
+                    <div class="bg-white h-auto p-5 rounded">
+                        <div>
+                            <h5 class="text-uppercase mb-2">javascript</h5>
+                            <div class="float-right share-icon-color ">
+                                <i class="ri-eye-fill"></i>
+                                <span class="font-medium">170</span></div>
+                        </div>
+
+                        <p class="mb-2 font-medium text-lg">React v16+ Cheat Sheet (PDF/JPG/Custom themes)
+                        </p>
+                        <h6 class="text-gray text-uppercase mb-3">MAY 14 2019 - Posted by John Doe - 1 Min
+                            Read</h6>
+                        <p class="mb-4">Laravel Vapor is a serverless deployment platform for Laravel,
+                            powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love
+                            with the scalable. One day however a small line of blind text by the name of
+                            Lorem Ipsum decided to leave...</p>
+                        <p class="border-bottom"></p>
+                        <div class="mt-4 mb-4">
+                            <a href="#" class="read-more">READ MORE</a>
+                            <div class="float-right share-icon-color ">
+                                <a href="#">
+                                    <i class="ri-share-line"></i>
+                                    <span class="font-medium">SHARE</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 p-3">
+                    <div class="bg-white h-auto p-5 rounded">
+                        <div>
+                            <h5 class="text-uppercase mb-2">javascript</h5>
+                            <div class="float-right share-icon-color ">
+                                <i class="ri-eye-fill"></i>
+                                <span class="font-medium">170</span></div>
+                        </div>
+
+                        <p class="mb-2 font-medium text-lg">React v16+ Cheat Sheet (PDF/JPG/Custom themes)
+                        </p>
+                        <h6 class="text-gray text-uppercase mb-3">MAY 14 2019 - Posted by John Doe - 1 Min
+                            Read</h6>
+                        <p class="mb-4">Laravel Vapor is a serverless deployment platform for Laravel,
+                            powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love
+                            with the scalable. One day however a small line of blind text by the name of
+                            Lorem Ipsum decided to leave...</p>
+                        <p class="border-bottom"></p>
+                        <div class="mt-4 mb-4">
+                            <a href="#" class="read-more">READ MORE</a>
+                            <div class="float-right share-icon-color ">
+                                <a href="#">
+                                    <i class="ri-share-line"></i>
+                                    <span class="font-medium">SHARE</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 xl:w-1/2 p-3">
+                    <div class="bg-white h-auto p-5 rounded">
+                        <div>
+                            <h5 class="text-uppercase mb-2">javascript</h5>
+                            <div class="float-right share-icon-color ">
+                                <i class="ri-eye-fill"></i>
+                                <span class="font-medium">170</span></div>
+                        </div>
+
+                        <p class="mb-2 font-medium text-lg">React v16+ Cheat Sheet (PDF/JPG/Custom themes)
+                        </p>
+                        <h6 class="text-gray text-uppercase mb-3">MAY 14 2019 - Posted by John Doe - 1 Min
+                            Read</h6>
+                        <p class="mb-4">Laravel Vapor is a serverless deployment platform for Laravel,
+                            powered by AWS. Launch your Laravel infrastructure on Vapor and fall in love
+                            with the scalable. One day however a small line of blind text by the name of
+                            Lorem Ipsum decided to leave...</p>
+                        <p class="border-bottom"></p>
+                        <div class="mt-4 mb-4">
+                            <a href="#" class="read-more">READ MORE</a>
+                            <div class="float-right share-icon-color ">
+                                <a href="#">
+                                    <i class="ri-share-line"></i>
+                                    <span class="font-medium">SHARE</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="w-full p-3">
+                    <!--Table Card-->
+
+                    <!--/table Card-->
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!--container Content-->
+
+    <!--footer Content-->
+    <div class="flex flex-wrap footer subscription-text-color">
+        <div class="container w-full mx-auto pt-10 px-4 md:px-0">
+            <div class="flex flex-wrap">
+                <div class="w-full md:w-1/4 xl:w-1/4 p-3">
+                    <div class="mb-2">
+                        <img src="image/footer-logo.png">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard</p>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/4 xl:w-1/4 p-3">
+                    <ul class="list-reset leading-normal text-white">
+                        <li class="hover:text-blue text-grey-darker">Design</li>
+                        <li class="hover:text-blue text-grey-darker">Development</li>
+                        <li class="hover:text-blue text-grey-darker">Technology</li>
+                        <li class="hover:text-blue text-grey-darker">Tools</li>
+                        <li class="hover:text-blue text-grey-darker">Freebies</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 xl:w-1/4 p-3">
+                    <ul class="list-reset leading-normal text-white">
+                        <li class="hover:text-green-dark text-grey-darker">PHP</li>
+                        <li class="hover:text-green-dark text-grey-darker">React</li>
+                        <li class="hover:text-green-dark text-grey-darker">Vue js</li>
+                        <li class="hover:text-green-light text-grey-darker">Wordpress</li>
+                        <li class="hover:text-green-light text-grey-darker">UI/UX</li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 xl:w-1/4 p-3">
+                    <div class="text-red-light mb-2 text-white">Subscription</div>
+                    <p class="text-grey-darker leading-normal">Subscription to be the first to know new feature ! No
+                        spam , promise! </p>
+                    <div class="mt-4 flex">
+                        <form class="w-full max-w-sm text-center py-4">
+                            <div class="flex items-center border-b border-2 gray-border">
+                                <input
+                                    class="appearance-none bg-transparent w-full subscription-text-color mr-3 py-2 px-2 leading-tight focus:outline-none"
+                                    type="email" placeholder="Email Address" aria-label="Email Address">
+                                <button
+                                    class="flex-shrink-0 text-sm  text-white py-1 px-2 rounded subscription-btn mr-1"
+                                    type="button">
+                                    Subscribe
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer-border"></div>
+        <!-- <hr class="border-b-2 border-gray-400 my-8 mx-4"> -->
+        <div class="container w-full mx-auto p-4 md:px-0">
+            <div class="flex flex-wrap">
+                <div class=" w-full md:w-1/6 xl:w-1/6 py-2">
+                    <ul class="flex ">
+                        <li><a href="#" class="sociallink"><i class="ri-github-fill"></i></a></li>
+                        <li><a href="#" class="sociallink"><i class="ri-medium-fill"></i></a></li>
+                        <li><a href="#" class="sociallink"><i class="ri-facebook-box-fill"></i></a></li>
+                        <li><a href="#" class="sociallink"><i class="ri-linkedin-box-fill"></i></a></li>
+                        <li><a href="#" class="sociallink"><i class="ri-youtube-fill"></i></a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-3/6 xl:w-3/6 py-2">
+                    <p class="text-center">Copyright &#169; 2019 TECHBlogs. All rights reserved.</p>
+                </div>
+                <div class="w-full md:w-2/6 xl:w-2/6 py-2">
+                    <ul class="flex">
+                        <li class="px-2"><a href="#" class="footer-link">About</a></li>|
+                        <li class="px-2"><a href="#" class="footer-link"> FAQ </a></li>|
+                        <li class="px-2"><a href="#" class="footer-link">Terms of Use </a></li>|
+                        <li class="px-2"><a href="#" class="footer-link">Privacy and Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer Content-->
+
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
